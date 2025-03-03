@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>!! Epicurean Escape !!</title>
+</head>
+<style>
+    body {
+        background-color: cyan;
+    }
+
+    h1 {
+        text-decoration: dotted;
+        text-decoration-color: black;
+        color: black;
+    }
+
+    .ms {
+        display: none;
+        max-height: 100%;
+        max-width: 100%;
+    }
+
+    section {
+        padding-top: 100px;
+    }
+</style>
+
+<body>
+    <center>
+        <h1>!! Epicurrean Escape !!</h1>
+    </center>
+    <section>
+        <center>
+            <img src="1.jpeg" alt="Bentely Convertible" height="400" width="700" class="ms">
+            <img src="2.jpeg" alt="Bugatti Convertible" height="400" width="700" class="ms">
+            <img src="3.jpeg" alt="Ferrari" height="400" width="700" class="ms">
+        </center>
+    </section>
+    <script>
+        var mine = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("ms");
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none"
+            }
+            mine++;
+            if (mine > x.length) {
+                mine = 1
+            }
+            x[mine - 1].style.display = "block";
+            setTimeout(carousel, 3000);
+        }
+    </script>
+</body>
+
+</html>
